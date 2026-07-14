@@ -1,0 +1,79 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Icono de gerbera naranja - Ester</title>
+<defs>
+<linearGradient id="petalG" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#ff9a3c"/>
+<stop offset="55%" stop-color="#f5730a"/>
+<stop offset="100%" stop-color="#c9450a"/>
+</linearGradient>
+<radialGradient id="centerGlow" cx="35%" cy="30%" r="75%">
+<stop offset="0%" stop-color="#ffe7c4"/>
+<stop offset="55%" stop-color="#ffd6a1"/>
+<stop offset="100%" stop-color="#ffc985"/>
+</radialGradient>
+</defs>
+<circle cx="200" cy="200" r="185" fill="#ffffff"/>
+<g>
+<g transform="rotate(0 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(45 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(90 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(135 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(180 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(225 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(270 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+<g transform="rotate(315 200 200)"><ellipse cx="200" cy="125" rx="38" ry="85" fill="url(#petalG)"/></g>
+</g>
+<circle cx="200" cy="200" r="42" fill="url(#centerGlow)"/>
+<g fill="#3a2010" opacity="0.55">
+<circle cx="200" cy="182" r="3.2"/>
+<circle cx="213" cy="187" r="2.8"/>
+<circle cx="190" cy="190" r="3"/>
+<circle cx="207" cy="196" r="2.6"/>
+<circle cx="193" cy="203" r="3.2"/>
+<circle cx="210" cy="209" r="2.8"/>
+<circle cx="185" cy="200" r="2.6"/>
+<circle cx="217" cy="199" r="2.8"/>
+<circle cx="200" cy="217" r="3"/>
+<circle cx="182" cy="211" r="2.6"/>
+<circle cx="215" cy="213" r="2.8"/>
+<circle cx="190" cy="177" r="2.6"/>
+</g>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</svg>

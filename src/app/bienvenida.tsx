@@ -1,39 +1,51 @@
-import { View, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
+import { router } from "expo-router";
+
 import { Colors } from "@/constants/theme";
+import Screen from "@/components/ui/Screen";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export default function BienvenidaScreen() {
+
+  function continuar() {
+    router.push("/registro");
+  }
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Bienvenida a WomenLab 💛</Text>
-      <Text style={styles.subtitle}>
-        Aquí comenzará la siguiente pantalla del UX Blueprint.
+    <Screen>
+
+      <Text style={styles.title}>
+        Qué alegría tenerte aquí
       </Text>
-    </View>
+
+      <Text style={styles.description}>
+        Este es tu espacio
+      </Text>
+
+      <PrimaryButton
+        title="Comencemos"
+        onPress={continuar}
+      />
+
+    </Screen>
   );
 }
 
 const styles = StyleSheet.create({
 
-  container: {
-    flex: 1,
-    backgroundColor: Colors.light.background,
-    justifyContent: "center",
-    alignItems: "center",
-    padding: 24,
-  },
-
   title: {
-    fontSize: 30,
+    fontSize: 34,
     fontWeight: "700",
     color: Colors.light.text,
-    marginBottom: 16,
     textAlign: "center",
+    marginBottom: 20,
   },
 
-  subtitle: {
-    fontSize: 18,
+  description: {
+    fontSize: 20,
     color: Colors.light.textSecondary,
     textAlign: "center",
+    marginBottom: 60,
   },
 
 });
